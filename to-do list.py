@@ -1,5 +1,3 @@
-# todo.py
-
 import json
 import os
 
@@ -20,9 +18,9 @@ def save_tasks(tasks):
 def show_tasks(tasks):
     """Display all tasks."""
     if not tasks:
-        print("\n✅ No tasks yet!")
+        print("\n No tasks yet!")
     else:
-        print("\n📋 To-Do List:")
+        print("\n To-Do List:")
         for i, task in enumerate(tasks, start=1):
             status = "✔️" if task["done"] else "❌"
             print(f"{i}. {task['title']} [{status}]")
@@ -84,10 +82,11 @@ def main():
         elif choice == "4":
             delete_task(tasks)
         elif choice == "5":
-            print("👋 Goodbye!")
+            print("Goodbye!")
             break
         else:
             print("Invalid choice, please try again.")
 
 if __name__ == "__main__":
     main()
+
